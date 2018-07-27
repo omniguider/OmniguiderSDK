@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OmniNavi</string>
+
+    <string name="dialog_button_ok_text">好</string>
+    <string name="dialog_button_no_text">否</string>
+    <string name="error_dialog_title_text_unknown">發生未預期錯誤</string>
+</resources>
