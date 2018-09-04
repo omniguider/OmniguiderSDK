@@ -42,7 +42,8 @@ public class NetworkManager {
 
     public static final String NETWORKMANAGER_TAG = NetworkManager.class.getSimpleName();
 //    public static final String DOMAIN_NAME = "http://nmp.utobonus.com/";
-    public static final String DOMAIN_NAME = "https://doit.utobonus.com/";
+//    public static final String DOMAIN_NAME = "https://doit.utobonus.com/";
+    public static final String DOMAIN_NAME = "https://navi.taipei/";
     public static final String API_RESULT_TRUE = "true";
     public static final String ERROR_MESSAGE_API_TIME_OUT = "Call API timeout";
     public static final int DEFAULT_TIMEOUT = 30000;
