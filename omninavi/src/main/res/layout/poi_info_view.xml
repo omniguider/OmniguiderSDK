@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/poi_info_view_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/poi_info_view_ll_a"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:id="@+id/poi_info_view_ll_poi_board"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_f9"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/poi_info_view_niv_poi_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:id="@+id/poi_info_view_tv_poi_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="16sp"
+                    tools:text="poi title" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/poi_info_view_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/btn_navi_arrow"
+            app:backgroundTint="@color/colorAccent"
+            app:layout_anchor="@id/poi_info_view_ll_a"
+            app:layout_anchorGravity="bottom|right|end" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_f9"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/poi_info_view_tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="02-55681686"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/poi_info_view_tv_business_hours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="10:00~22:00"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/poi_info_view_tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="臺北市市民大道一段100號B1"
+            android:textColor="@color/text_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,7 +1,14 @@
 <resources>
-    <string name="app_name">OmniNavi</string>
+    <string name="app_name">OmniguiderSDK</string>
+    <string name="title_activity_ogmaps">Map</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyC5R4Lvngu6XG68v8HuNxxq8Zn0wGLZV4U</string>
+
+    <string name="error_dialog_title_text_normal">提 示</string>
+    <string name="error_dialog_message_text_api">發生未預期的錯誤，請檢察網路狀態</string>
 
     <string name="dialog_button_ok_text">好</string>
     <string name="dialog_button_no_text">否</string>
     <string name="error_dialog_title_text_unknown">發生未預期錯誤</string>
+
 </resources>
