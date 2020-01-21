@@ -21,6 +21,7 @@ allprojects {
         maven {
             url  "http://indooratlas-ltd.bintray.com/mvn-public"
         }
+        maven { url 'https://jitpack.io' }
     }
 }
 

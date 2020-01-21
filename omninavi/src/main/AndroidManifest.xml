@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.omni.omninavi">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -29,7 +30,8 @@
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        tools:replace="android:appComponentFactory">
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -69,7 +71,7 @@
             android:label="routing"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
 
         </activity>
@@ -79,9 +81,9 @@
             android:label="北市府 AAR"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
-                <!--&lt;!&ndash;<action android:name="android.intent.action.MAIN" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<action android:name="android.intent.action.MAIN" />&ndash;&gt;-->
 
-                <!--&lt;!&ndash;<category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<category android:name="android.intent.category.LAUNCHER" />&ndash;&gt;-->
             <!--</intent-filter>-->
         </activity>
 
@@ -90,7 +92,7 @@
             android:label="Emergency"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
 
