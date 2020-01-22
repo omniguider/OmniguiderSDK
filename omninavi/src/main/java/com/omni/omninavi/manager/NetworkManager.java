@@ -154,8 +154,9 @@ public class NetworkManager {
         addMacInParams(paramsString);
 
         final String requestUrl = (TextUtils.isEmpty(paramsString)) ? url : url + "?" + paramsString;
-        JsonObjectRequest request = new JsonObjectRequest(requestMethod,
-                requestUrl,
+        JsonObjectRequest request = new JsonObjectRequest(
+//                requestMethod,
+                requestUrl,null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -227,8 +228,9 @@ public class NetworkManager {
         addMacInParams(paramsString);
 
         final String requestUrl = (TextUtils.isEmpty(paramsString)) ? url : url + "?" + paramsString;
-        JsonObjectRequest request = new JsonObjectRequest(requestMethod,
-                requestUrl,
+        JsonObjectRequest request = new JsonObjectRequest(
+//                requestMethod,
+                requestUrl,null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
