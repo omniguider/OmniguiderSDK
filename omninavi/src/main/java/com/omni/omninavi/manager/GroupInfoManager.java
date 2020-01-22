@@ -2,7 +2,7 @@ package com.omni.omninavi.manager;
 
 import android.content.Context;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.omni.omninavi.model.SendUserLocationResponse;
 import com.omni.omninavi.model.UserCurrentLocation;

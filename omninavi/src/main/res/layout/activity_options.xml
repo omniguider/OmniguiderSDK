@@ -58,33 +58,33 @@
                 android:spinnerMode="dialog" />
         </LinearLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/activity_options_til_poi_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:errorEnabled="true">
 
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/activity_options_tiet_poi_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="POI id :"
                 android:inputType="numberDecimal" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:errorEnabled="true">
 
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/activity_options_tiet_poi_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="目的地名稱 (非必要) :" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!--<android.support.design.widget.TextInputLayout-->
         <!--android:id="@+id/activity_options_til_floor"-->
@@ -101,7 +101,7 @@
 
         <!--</android.support.design.widget.TextInputLayout>-->
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/activity_options_start_navi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
             android:layout_marginTop="16dp"
             android:orientation="horizontal">
 
-            <android.support.v7.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/activity_options_open_map"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

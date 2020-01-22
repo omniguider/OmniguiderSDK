@@ -6,8 +6,8 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 import android.provider.Settings;
-import android.support.annotation.ColorRes;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.ColorRes;
+import androidx.core.content.ContextCompat;
 import android.util.TypedValue;
 import android.view.View;
 
