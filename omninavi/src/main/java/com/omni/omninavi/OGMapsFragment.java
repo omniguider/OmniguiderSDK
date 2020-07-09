@@ -316,9 +316,9 @@ public class OGMapsFragment extends Fragment implements OnMapReadyCallback,
 
             @Override
             public void onFail(VolleyError volleyError, boolean b) {
-                DialogTools.getInstance().showErrorMessage(mContext,
-                        R.string.error_dialog_title_text_normal,
-                        getString(R.string.error_dialog_message_text_api));
+//                DialogTools.getInstance().showErrorMessage(mContext,
+//                        R.string.error_dialog_title_text_normal,
+//                        getString(R.string.error_dialog_message_text_api));
                 Log.e("@W@", "*** Get building floors failed");
             }
         });
@@ -878,9 +878,9 @@ public class OGMapsFragment extends Fragment implements OnMapReadyCallback,
 
                     @Override
                     public void onFail(VolleyError error, boolean shouldRetry) {
-                        DialogTools.getInstance().showErrorMessage(mContext,
-                                R.string.error_dialog_title_text_normal,
-                                getString(R.string.error_dialog_message_text_api));
+//                        DialogTools.getInstance().showErrorMessage(mContext,
+//                                R.string.error_dialog_title_text_normal,
+//                                getString(R.string.error_dialog_message_text_api));
                         Log.e("@W@", "*** Get user position to p route failed");
                     }
                 });
@@ -904,9 +904,9 @@ public class OGMapsFragment extends Fragment implements OnMapReadyCallback,
 
                     @Override
                     public void onFail(VolleyError error, boolean shouldRetry) {
-                        DialogTools.getInstance().showErrorMessage(mContext,
-                                R.string.error_dialog_title_text_normal,
-                                getString(R.string.error_dialog_message_text_api));
+//                        DialogTools.getInstance().showErrorMessage(mContext,
+//                                R.string.error_dialog_title_text_normal,
+//                                getString(R.string.error_dialog_message_text_api));
                         Log.e("@W@", "*** Get p to p route failed");
                     }
                 });
@@ -927,9 +927,9 @@ public class OGMapsFragment extends Fragment implements OnMapReadyCallback,
 
                     @Override
                     public void onFail(VolleyError error, boolean shouldRetry) {
-                        DialogTools.getInstance().showErrorMessage(mContext,
-                                R.string.error_dialog_title_text_normal,
-                                getString(R.string.error_dialog_message_text_api));
+//                        DialogTools.getInstance().showErrorMessage(mContext,
+//                                R.string.error_dialog_title_text_normal,
+//                                getString(R.string.error_dialog_message_text_api));
                         Log.e("@W@", "*** Get user indoor location to outdoor poi failed");
                     }
                 });

@@ -1121,9 +1121,9 @@ public class OGMapsActivity extends AppCompatActivity implements OnMapReadyCallb
 
                     @Override
                     public void onFail(VolleyError error, boolean shouldRetry) {
-                        DialogTools.getInstance().showErrorMessage(OGMapsActivity.this,
-                                R.string.error_dialog_title_text_normal,
-                                getString(R.string.error_dialog_message_text_api));
+//                        DialogTools.getInstance().showErrorMessage(OGMapsActivity.this,
+//                                R.string.error_dialog_title_text_normal,
+//                                getString(R.string.error_dialog_message_text_api));
                     }
                 });
     }
@@ -1146,9 +1146,9 @@ public class OGMapsActivity extends AppCompatActivity implements OnMapReadyCallb
 
                     @Override
                     public void onFail(VolleyError error, boolean shouldRetry) {
-                        DialogTools.getInstance().showErrorMessage(OGMapsActivity.this,
-                                R.string.error_dialog_title_text_normal,
-                                getString(R.string.error_dialog_message_text_api));
+//                        DialogTools.getInstance().showErrorMessage(OGMapsActivity.this,
+//                                R.string.error_dialog_title_text_normal,
+//                                getString(R.string.error_dialog_message_text_api));
                     }
                 });
     }
@@ -1170,9 +1170,9 @@ public class OGMapsActivity extends AppCompatActivity implements OnMapReadyCallb
 
                     @Override
                     public void onFail(VolleyError error, boolean shouldRetry) {
-                        DialogTools.getInstance().showErrorMessage(OGMapsActivity.this,
-                                R.string.error_dialog_title_text_normal,
-                                getString(R.string.error_dialog_message_text_api));
+//                        DialogTools.getInstance().showErrorMessage(OGMapsActivity.this,
+//                                R.string.error_dialog_title_text_normal,
+//                                getString(R.string.error_dialog_message_text_api));
                     }
                 });
     }
@@ -1201,9 +1201,9 @@ public class OGMapsActivity extends AppCompatActivity implements OnMapReadyCallb
 
                     @Override
                     public void onFail(VolleyError volleyError, boolean b) {
-                        DialogTools.getInstance().showErrorMessage(OGMapsActivity.this,
-                                R.string.error_dialog_title_text_normal,
-                                getString(R.string.error_dialog_message_text_api));
+//                        DialogTools.getInstance().showErrorMessage(OGMapsActivity.this,
+//                                R.string.error_dialog_title_text_normal,
+//                                getString(R.string.error_dialog_message_text_api));
                     }
                 });
 
