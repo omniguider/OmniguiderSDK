@@ -20,7 +20,7 @@ import com.indooratlas.android.sdk.IALocationListener;
 import com.indooratlas.android.sdk.IALocationManager;
 import com.indooratlas.android.sdk.IALocationRequest;
 import com.indooratlas.android.sdk.IARegion;
-import com.indooratlas.android.sdk.resources.IAResourceManager;
+//import com.indooratlas.android.sdk.resources.IAResourceManager;
 
 /**
  * Created by wiliiamwang on 15/11/2017.
@@ -51,7 +51,7 @@ public class OGService implements IARegion.Listener,
 
     private Context mContext;
     private IALocationManager mIALocationManager;
-    private IAResourceManager mIAResourceManager;
+//    private IAResourceManager mIAResourceManager;
     private boolean mIsIndoor = false;
     private String mCurrentVenueId;
     private String mCurrentFloorId;
@@ -98,9 +98,9 @@ public class OGService implements IARegion.Listener,
             mIALocationManager.unregisterRegionListener(this);
         }
         mIALocationManager.registerRegionListener(this);
-        if (mIAResourceManager == null) {
-            mIAResourceManager = IAResourceManager.create(mContext);
-        }
+//        if (mIAResourceManager == null) {
+//            mIAResourceManager = IAResourceManager.create(mContext);
+//        }
     }
 
     public void unRegisterLocationService() {
