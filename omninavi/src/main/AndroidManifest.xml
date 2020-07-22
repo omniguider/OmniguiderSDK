@@ -46,11 +46,11 @@
 
         <meta-data
             android:name="com.indooratlas.android.sdk.API_KEY"
-            android:value="@string/indoor_atlas_api_key" />
+            android:value="f5c53b8b-7bb2-4ab2-914b-a858461f998f" />
 
         <meta-data
             android:name="com.indooratlas.android.sdk.API_SECRET"
-            android:value="@string/indoor_atlas_api_secret" />
+            android:value="3rA2eHl4AlD8Upn/YTbo4QBnjb7b0i3ZxP1gvfn7Ku2C07Wi+S1M++6lBkLzY4XvsCfQjdyZB1y8fkrArY9MKtqMEBYxX+lwA/bpqkGPe7tkodxsCXT00TvbzIL35w==" />
 
         <activity
             android:name=".OGMapsActivity"
