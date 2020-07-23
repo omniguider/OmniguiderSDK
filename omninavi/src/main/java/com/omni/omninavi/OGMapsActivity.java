@@ -410,7 +410,7 @@ public class OGMapsActivity extends AppCompatActivity implements OnMapReadyCallb
                     @Override
                     public void run() {
                         DialogTools.getInstance().dismissProgress(OGMapsActivity.this);
-                        DialogTools.getInstance().showErrorMessage(OGMapsActivity.this, "提示", "發生未預期錯誤，請檢查網路設定");
+//                        DialogTools.getInstance().showErrorMessage(OGMapsActivity.this, "提示", "發生未預期錯誤，請檢查網路設定");
                     }
                 };
             }
