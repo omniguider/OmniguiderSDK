@@ -14,14 +14,21 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
+
 import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
+
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
@@ -195,10 +202,10 @@ public class OGMapsActivity extends AppCompatActivity implements OnMapReadyCallb
 
     @ColorInt
     private int[] mPolyLineColors = {Color.RED,
-            Color.BLUE,
-            Color.GREEN,
-            Color.YELLOW,
-            Color.BLACK};
+            Color.RED,
+            Color.RED,
+            Color.RED,
+            Color.RED};
 
     private Marker mOriginalPOIMarker;
 
@@ -605,7 +612,9 @@ public class OGMapsActivity extends AppCompatActivity implements OnMapReadyCallb
             mUserAccuracyCircle = mMap.addCircle(new CircleOptions()
                     .center(position)
                     .radius(location.getAccuracy() / 2)
-                    .strokeWidth(10)
+                    .strokeColor(ContextCompat.getColor(this, R.color.map_circle_stroke_color))
+                    .fillColor(ContextCompat.getColor(this, R.color.map_circle_fill_color))
+                    .strokeWidth(5)
                     .zIndex(OGService.MARKER_Z_INDEX));
         } else {
             mUserMarker.setPosition(position);
