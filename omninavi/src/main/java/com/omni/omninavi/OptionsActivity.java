@@ -13,13 +13,17 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.Settings;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+
 import androidx.core.app.ActivityCompat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatButton;
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -252,7 +256,7 @@ public class OptionsActivity extends Activity implements BluetoothAdapter.LeScan
 //        findViewById(R.id.activity_options_emergency).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                startActivity(new Intent(OptionsActivity.this, OGEmergencyActivity.class));
+//                startActivity(new Intent(OptionsActivity .this, OGEmergencyActivity.class));
 //            }
 //        });
         beaconBatteryLogTV = (TextView) findViewById(R.id.activity_options_battery_log);

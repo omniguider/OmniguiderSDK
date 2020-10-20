@@ -76,7 +76,7 @@
         </activity>
 
         <activity
-            android:name=".OptionsActivity"
+            android:name=".MainActivity"
             android:label="北市府 AAR"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
