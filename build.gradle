@@ -4,11 +4,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> b382dfe1bbf5e2ad6efc0051e8e6bb4629859747
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.4.2'
@@ -23,11 +19,7 @@ allprojects {
         google()
         jcenter()
         maven {
-<<<<<<< HEAD
             url "https://dl.cloudsmith.io/public/indooratlas/mvn-public/maven/"
-=======
-            url  "http://indooratlas-ltd.bintray.com/mvn-public"
->>>>>>> b382dfe1bbf5e2ad6efc0051e8e6bb4629859747
         }
         maven { url 'https://jitpack.io' }
     }
