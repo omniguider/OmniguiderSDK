@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_CircleExpandAnimTime">0</integer>
+    <integer name="config_CircleCollapseAnimTime">0</integer>
+    <integer name="config_ExpandAnimTime">250</integer>
+    <integer name="config_CollapseAnimTime">200</integer>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/default_padding">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/create_group_success_dialog_til_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:hintTextAppearance="@style/OmniTextInputLayoutAppearance">
+
+        <com.omni.navisdk.view.OmniTextInputEditText
+            android:id="@+id/create_group_success_dialog_otiet_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dialog_hint_create_group_success_title"
+            android:imeOptions="actionDone"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/create_group_success_dialog_til_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:errorEnabled="true"
+        app:hintTextAppearance="@style/OmniTextInputLayoutAppearance">
+
+        <com.omni.navisdk.view.OmniTextInputEditText
+            android:id="@+id/create_group_success_dialog_otiet_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dialog_hint_create_group_success_key"
+            android:imeOptions="actionDone"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/create_group_success_dialog_tv_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/dialog_btn_blue"
+        android:gravity="center"
+        android:paddingBottom="6dp"
+        android:paddingLeft="45dp"
+        android:paddingRight="45dp"
+        android:paddingTop="6dp"
+        android:text="@string/dialog_btn_text_create_group_success_complete"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/dialog_btn_text_size" />
+
+</LinearLayout>

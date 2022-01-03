@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/hint_action_bar"
+        layout="@layout/only_back_action_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hint_action_bar"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/join_group_dialog_til_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:helperText="@string/input_error_required"
+            app:helperTextEnabled="true"
+            app:hintTextAppearance="@style/OmniTextInputLayoutAppearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/join_group_dialog_otiet_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dialog_hint_create_group_name"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/join_group_dialog_til_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:helperText="@string/input_error_required"
+            app:helperTextEnabled="true"
+            app:hintTextAppearance="@style/OmniTextInputLayoutAppearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/join_group_dialog_otiet_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dialog_join_group_input_key"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/join_group_dialog_til_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            app:helperText="@string/input_help_optional"
+            app:helperTextEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/OmniTextInputLayoutAppearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/join_group_dialog_til_tel_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dialog_hint_create_group_tel"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:lines="1"
+                android:maxLines="1"
+                android:textColor="@color/colorPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:id="@+id/join_group_dialog_tv_join"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:elevation="6dp"
+        android:text="@string/group_page_join_group"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/dialog_btn_text_size"
+        app:backgroundTint="@android:color/white"
+        app:cornerRadius="20dp"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="1dp" />
+
+    <View
+        android:id="@+id/mask"
+        android:background="@color/page_change_hint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

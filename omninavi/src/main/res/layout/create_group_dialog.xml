@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_group_dialog_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <include
+        android:id="@+id/hint_action_bar"
+        layout="@layout/only_back_action_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hint_action_bar"
+        android:layout_above="@+id/create_group_dialog_tv_create">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="@dimen/default_padding">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/create_group_dialog_til_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:helperText="@string/input_error_required"
+                app:helperTextEnabled="true"
+                app:hintTextAppearance="@style/OmniTextInputLayoutAppearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/create_group_dialog_otiet_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dialog_hint_create_group_title"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimary" />
+                <!--android:background="@drawable/round_gradient_primary"
+                android:padding="5dp"-->
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/create_group_dialog_til_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:helperText="@string/input_error_required"
+                app:helperTextEnabled="true"
+                app:hintTextAppearance="@style/OmniTextInputLayoutAppearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/create_group_dialog_otiet_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dialog_hint_create_group_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/create_group_dialog_til_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:helperText="@string/input_help_optional"
+                app:helperTextEnabled="true"
+                app:hintEnabled="true"
+                app:hintTextAppearance="@style/OmniTextInputLayoutAppearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/create_group_dialog_til_tel_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dialog_hint_create_group_tel"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/dialog_hint_create_group_hour"
+                    android:textColor="@color/hint_gray"
+                    android:textSize="18.2sp" />
+
+                <NumberPicker
+                    android:id="@+id/create_group_dialog_np"
+                    android:layout_width="50dp"
+                    android:layout_height="100dp"
+                    android:descendantFocusability="blocksDescendants" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/collection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <CheckBox
+                    android:id="@+id/enable_collection_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <LinearLayout
+                    android:id="@+id/collection_time_setting_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@+id/enable_collection_time"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/dialog_hint_create_group_meeting_time"
+                        android:textColor="@color/hint_gray"
+                        android:textSize="18.2sp" />
+
+                    <NumberPicker
+                        android:id="@+id/collection_time_hour"
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:descendantFocusability="blocksDescendants" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="："
+                        android:textColor="@color/hint_gray"
+                        android:textSize="18.2sp" />
+
+                    <NumberPicker
+                        android:id="@+id/collection_time_minute"
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:descendantFocusability="blocksDescendants" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/collection_place_setting_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/collection_time_setting_layout"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_toStartOf="@+id/enable_collection_time"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/dialog_hint_create_group_meeting_place"
+                        android:textColor="@color/hint_gray"
+                        android:textSize="18.2sp" />
+
+                    <TextView
+                        android:id="@+id/collection_place_setting_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="@string/dialog_hint_create_group_meeting_place_default"
+                        android:textColor="@android:color/black"
+                        android:textSize="18.2sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/collection_notice_setting_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/collection_place_setting_layout"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_toStartOf="@+id/enable_collection_time"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/dialog_hint_create_group_meeting_notice"
+                        android:textColor="@color/hint_gray"
+                        android:textSize="18.2sp" />
+
+                    <NumberPicker
+                        android:id="@+id/collection_notice_time_minute"
+                        android:layout_width="50dp"
+                        android:layout_height="100dp"
+                        android:descendantFocusability="blocksDescendants" />
+
+                    <TextView
+                        android:id="@+id/collection_notice_setting_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="@string/dialog_hint_create_group_meeting_notice_hint"
+                        android:textColor="@color/hint_gray"
+                        android:textSize="18.2sp"
+                        tools:text="分鐘前" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/collection_time_blocker"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignTop="@+id/collection_time_setting_layout"
+                    android:layout_alignBottom="@+id/collection_notice_setting_layout"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/enable_collection_time"
+                    android:background="#a0ffffff"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_above="@+id/create_group_dialog_tv_create"
+        android:background="@drawable/shadow"
+        android:visibility="invisible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/create_group_dialog_tv_create"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        android:layout_width="match_parent"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:text="@string/group_page_create_group"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/dialog_btn_text_size"
+        app:backgroundTint="@color/colorPrimary"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/create_group_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucent_black_30"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Large"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/mask"
+        android:background="@color/page_change_hint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

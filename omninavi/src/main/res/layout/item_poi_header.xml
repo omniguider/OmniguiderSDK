@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/solid_top_round_rectangle_white">
+
+    <View
+        android:id="@+id/poi_info_header_view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_14" />
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/poi_info_header_view_niv"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/poi_info_header_view_divider"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/poi_info_header_view_niv"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/default_padding"
+        android:paddingTop="6dp"
+        android:paddingRight="@dimen/default_padding"
+        android:paddingBottom="30dp">
+
+        <ImageView
+            android:id="@+id/poi_info_header_view_iv_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/icon_arrow_up" />
+
+        <TextView
+            android:id="@+id/poi_info_header_view_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="B2-員工健康教室"
+            android:textColor="@color/gray_33"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/poi_info_header_view_rl_btns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/poi_info_header_view_iv_navi"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/solid_circle_shadow_white"
+                android:gravity="center"
+                android:padding="12dp"
+                android:src="@mipmap/start_nav"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/poi_info_header_view_route_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_round_rectangle_blue"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/icon_route" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:text="@string/map_page_route_plan"
+                    android:textColor="@color/blue_00"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/poi_info_header_gather_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                android:background="@drawable/solid_round_rectangle_blue"
+                android:text="@string/create_group_meeting_place"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/poi_info_header_view_list_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.omni.navisdk.view.CircleNetworkImageView
+                android:id="@+id/item_poi_header_iv_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/solid_circle_shadow_white"
+                android:padding="12dp"
+                android:src="@mipmap/store"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
