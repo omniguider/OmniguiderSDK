@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:id="@+id/item_guide_detail_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/solid_round_rectangle_blue_f2"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/item_guide_niv"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/icon_theme_loc" />
+
+        <TextView
+            android:id="@+id/item_guide_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:gravity="center_vertical"
+            android:singleLine="false"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="體驗行動APP，認識大台北" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_guide_detail_map"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="16dp"
+        android:src="@mipmap/ic_guide_map" />
+</FrameLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:foreground="?attr/selectableItemBackground"
+    android:minHeight="@dimen/list_item_height">
+
+    <TextView
+        android:id="@+id/leave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/info_view"
+        android:layout_alignBottom="@+id/info_view"
+        android:layout_alignParentEnd="true"
+        android:background="#ba272d"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/quit"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/info_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <com.omni.navisdk.view.CircleNetworkImageView
+            android:id="@+id/group_info_item_view_cniv"
+            android:layout_width="@dimen/list_item_icon_width"
+            android:layout_height="@dimen/list_item_icon_height"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/default_padding"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/group_info_item_view_rl_vision"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/list_item_icon_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/default_padding"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="8dp"
+                android:alpha="0.5"
+                android:background="@drawable/arrow_r_gray"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/group_info_item_view_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/list_item_icon_height"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toStartOf="@id/group_info_itm_view_key"
+            android:layout_toEndOf="@id/group_info_item_view_cniv"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="群組名稱" />
+
+        <TextView
+            android:id="@+id/group_info_itm_view_key"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/list_item_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/group_info_item_view_rl_vision"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:textColor="@color/blue_00"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="1234" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/touch_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/info_view"
+        android:layout_alignBottom="@+id/info_view"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground" />
+</RelativeLayout>

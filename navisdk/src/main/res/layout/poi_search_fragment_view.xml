@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_search_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_00">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/poi_search_activity_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white">
+
+        <FrameLayout
+            android:id="@+id/poi_search_activity_back"
+            android:layout_width="@dimen/action_bar_btn_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="left">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp"
+                android:src="@mipmap/btn_back_b" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/poi_search_activity_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/map_page_title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/poi_search_activity_search_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/poi_search_activity_action_bar"
+        android:background="@color/blue_00"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/poi_search_activity_search_btn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_weight="0.1"
+            android:padding="2dp"
+            android:src="@mipmap/button_search" />
+
+        <EditText
+            android:id="@+id/poi_search_activity_search_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="0.8"
+            android:background="@drawable/spinner_item_background"
+            android:hint="@string/search_keyword"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="#80ffffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/poi_search_activity_clear_btn"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="0.1"
+            android:padding="6dp"
+            android:src="@mipmap/icon_clear_keyword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/poi_search_activity_quick_search_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/poi_search_activity_search_ll"
+        android:background="#d800121d"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:text="熱門搜尋"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/poi_search_activity_hot_search_cg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:theme="@style/Theme.MaterialComponents.Light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:text="歷史搜尋"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/poi_search_activity_clear_record_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:gravity="end"
+                android:text="清空搜尋紀錄"
+                android:textColor="@color/gray_99"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/poi_search_activity_search_record_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/drawer_exhibits_fragment_view_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/poi_search_activity_search_ll"
+        android:layout_alignParentBottom="true"
+        android:background="#d800121d"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/no_data_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/poi_search_activity_search_ll"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#d800121d"
+        android:gravity="center"
+        android:text="搜尋無相關資料"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

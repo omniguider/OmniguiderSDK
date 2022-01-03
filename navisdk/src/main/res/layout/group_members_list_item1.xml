@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?attr/selectableItemBackground"
+    android:minHeight="@dimen/list_item_icon_height">
+
+    <TextView
+        android:id="@+id/group_member_name"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_hint_create_group_name_title"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/group_members_list_item_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/group_member_name"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        tools:text="房主" />
+
+    <ImageView
+        android:id="@+id/group_members_list_item_iv_tel"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignTop="@+id/group_members_list_item_tv_name"
+        android:layout_alignBottom="@+id/group_members_list_item_tv_name"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
+        android:adjustViewBounds="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@mipmap/button_phone" />
+
+    <TextView
+        android:id="@+id/group_members_list_item_tv_floor_number"
+        android:layout_width="32sp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toStartOf="@+id/arrow"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/list_item_title_text_size"
+        android:visibility="gone"
+        tools:text="10F" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.5"
+        android:background="@drawable/arrow_r_gray" />
+
+    <View
+        android:id="@+id/view27"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/group_members_list_item_tv_name"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/divider" />
+
+</RelativeLayout>

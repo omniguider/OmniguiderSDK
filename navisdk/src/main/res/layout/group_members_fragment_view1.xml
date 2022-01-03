@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_member_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/group_main_fragment_view_abl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/group_members_fragment_view_tb"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/white">
+
+                <FrameLayout
+                    android:id="@+id/group_members_fragment_view_tv_back"
+                    android:layout_width="@dimen/action_bar_btn_width"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start">
+
+                    <ImageView
+                        android:id="@+id/only_back_action_bar_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="20dp"
+                        android:src="@mipmap/btn_back_b" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/group_members_fragment_view_tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/detail_action_bar_fl_edit"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/default_padding"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/prehistory_action_bar_iv_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/string_edit"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <View
+            android:id="@+id/divider_below_tb"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/group_members_fragment_view_tb"
+            android:background="@color/gray_d8"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/blue_00"
+                        android:padding="16dp"
+                        android:text="@string/string_group_creator_info"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/group_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView30"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="群組金鑰：9999" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/blue_00"
+                    app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+                <include
+                    android:id="@+id/group_member_creater"
+                    layout="@layout/group_members_list_item1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/meeting_time_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/group_member_meeting_time_hint"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/dialog_hint_create_group_meeting_time"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/group_member_meeting_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/group_member_meeting_time_hint"
+                        app:layout_constraintStart_toEndOf="@+id/group_member_meeting_time_hint"
+                        app:layout_constraintTop_toTopOf="@+id/group_member_meeting_time_hint"
+                        tools:text="15:30" />
+
+                    <TextView
+                        android:id="@+id/group_member_notice_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/group_member_meeting_time_hint"
+                        tools:text="10分鐘前提醒" />
+
+                    <View
+                        android:id="@+id/view331"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@color/divider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/group_member_meeting_time_hint" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/meeting_place_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp">
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/dialog_hint_create_group_meeting_place"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/collection_place_setting_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:singleLine="true"
+                        android:textColor="@color/blue_00"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView39"
+                        app:layout_constraintEnd_toStartOf="@+id/collection_place_more_info"
+                        app:layout_constraintStart_toEndOf="@+id/textView39"
+                        app:layout_constraintTop_toTopOf="@+id/textView39" />
+
+                    <ImageView
+                        android:id="@+id/collection_place_navi_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:adjustViewBounds="true"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:src="@mipmap/button_guide_bl"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView39"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView39" />
+
+                    <TextView
+                        android:id="@+id/collection_place_more_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text=""
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/list_item_title_text_size"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView39"
+                        app:layout_constraintEnd_toStartOf="@+id/collection_place_navi_btn"
+                        app:layout_constraintTop_toTopOf="@+id/textView39"
+                        tools:text="1F" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/group_member_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue_00"
+                    android:padding="16dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="成員(3)" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider_below_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/info_layout"
+                android:background="@color/blue_00" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/group_members_fragment_view_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/member_group_dialog_tv_leave"
+                android:layout_below="@+id/divider_below_info_layout"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/member_group_dialog_tv_leave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/stroke_round_rectangle_blue_r10"
+                android:elevation="6dp"
+                android:gravity="center"
+                android:text="@string/dialog_btn_text_leave_group"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                android:textColor="@color/blue_00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:theme="@style/Theme.MaterialComponents.Light"
+                app:backgroundTint="@null"
+                app:cornerRadius="20dp"
+                app:strokeColor="@color/red"
+                app:strokeWidth="1dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/edit_meeting_function_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:elevation="50dp"
+                android:focusable="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue_00"
+                    android:padding="16dp"
+                    android:text="@string/string_meeting_function"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageView
+                    android:id="@+id/clean_setting"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView36"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView36"
+                    app:srcCompat="@drawable/btn_clean_g" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/blue_00"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView36" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/dialog_hint_create_group_meeting_place"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+                <TextView
+                    android:id="@+id/edit_meeting_place_setting_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:text="@string/string_select_please"
+                    android:textColor="@color/blue_00"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView41"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_meeting_place_more_info"
+                    app:layout_constraintStart_toEndOf="@+id/textView41"
+                    app:layout_constraintTop_toTopOf="@+id/textView41" />
+
+                <TextView
+                    android:id="@+id/edit_meeting_place_more_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="@color/hint_gray"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView41"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView41"
+                    tools:text="1F" />
+
+                <View
+                    android:id="@+id/view30"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+                <TextView
+                    android:id="@+id/textView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/dialog_hint_create_group_meeting_time"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView41"
+                    app:layout_constraintTop_toBottomOf="@+id/view30" />
+
+                <TextView
+                    android:id="@+id/edit_meeting_time_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:ellipsize="end"
+                    android:gravity="end"
+                    android:singleLine="true"
+                    android:text="@string/string_select_please"
+                    android:textColor="@color/blue_00"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView38"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView38"
+                    app:layout_constraintTop_toTopOf="@+id/textView38"
+                    tools:text="-----------11111111111111111----------------------------" />
+
+                <View
+                    android:id="@+id/view311"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView38" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/dialog_hint_create_group_meeting_notice"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView38"
+                    app:layout_constraintTop_toBottomOf="@+id/view311" />
+
+                <TextView
+                    android:id="@+id/notice_time_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView42"
+                    app:layout_constraintEnd_toStartOf="@+id/edit_meeting_notice_setting_btn"
+                    app:layout_constraintTop_toTopOf="@+id/textView42" />
+
+                <TextView
+                    android:id="@+id/edit_meeting_notice_setting_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/dialog_hint_create_group_meeting_notice_hint"
+
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView42"
+                    app:layout_constraintEnd_toStartOf="@+id/notice_decrease_time"
+                    app:layout_constraintTop_toTopOf="@+id/textView42"
+                    app:layout_constraintVertical_bias="1.0"
+                    tools:text="分鐘前" />
+
+                <ImageView
+                    android:id="@+id/notice_increase_time"
+                    android:layout_width="42dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_add"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView42"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView42" />
+
+                <ImageView
+                    android:id="@+id/notice_decrease_time"
+                    android:layout_width="42dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_reduce"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView42"
+                    app:layout_constraintEnd_toStartOf="@+id/notice_increase_time"
+                    app:layout_constraintTop_toTopOf="@+id/textView42" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/edit_meeting_function"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/solid_round_rectangle_blue_00_r"
+                    android:gravity="center"
+                    android:text="@string/sure"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:backgroundTint="@null"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_member_view_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucent_black_30"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Large"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+</FrameLayout>

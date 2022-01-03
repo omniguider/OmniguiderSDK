@@ -1,1 +1,3 @@
-include ':app', ':omninavi'
+include ':navisdk'
+include ':app'
+rootProject.name = "NaviSDK"

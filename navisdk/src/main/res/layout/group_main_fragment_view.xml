@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/group_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/group_main_fragment_view_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/group_main_fragment_view_abl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/group_main_fragment_view_tb"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/white">
+
+                <FrameLayout
+                    android:id="@+id/group_main_fragment_view_tv_back"
+                    android:layout_width="@dimen/action_bar_btn_width"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="20dp"
+                        android:src="@mipmap/btn_back_b" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/group_main_fragment_view_fl_join"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/default_padding"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/button_join_w" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/group_main_fragment_view_fl_add"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        app:srcCompat="@drawable/button_create_group_w" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/group_main_fragment_view_tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/fragment_navi_menu_find_friend"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/group_main_fragment_intro"
+                    android:layout_width="35dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="@dimen/default_padding">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:padding="5dp"
+                        android:src="@mipmap/button_info"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/group_main_fragment_view_abl"
+            android:layout_alignParentStart="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/group_main_fragment_view_rv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/group_main_fragment_view_btn_ll"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/group_main_fragment_view_tv_no_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:gravity="start"
+                android:text="@string/group_page_no_group"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_big"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/guideline40"
+                app:layout_constraintStart_toStartOf="@+id/guideline39"
+                app:layout_constraintTop_toBottomOf="@+id/group_main_fragment_view_iv_no_group"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/group_main_fragment_view_iv_no_group"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/img_opps"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/group_main_fragment_view_btn_ll"
+                app:layout_constraintEnd_toStartOf="@+id/guideline40"
+                app:layout_constraintStart_toStartOf="@+id/guideline39"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <View
+                android:id="@+id/view24"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/shadow"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/group_main_fragment_view_btn_ll" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_d8"
+                app:layout_constraintBottom_toTopOf="@+id/group_main_fragment_view_btn_ll" />
+
+            <LinearLayout
+                android:id="@+id/group_main_fragment_view_btn_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/group_main_fragment_view_tv_join_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/group_main_fragment_view_tv_create_group"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/stroke_round_rectangle_blue_r10"
+                    android:elevation="6dp"
+                    android:gravity="center"
+                    android:text="@string/group_page_join_group"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                    android:textColor="@color/blue_00"
+                    android:textSize="18sp"
+                    app:backgroundTint="@null"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="@color/blue_00"
+                    app:strokeWidth="1dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/group_main_fragment_view_tv_create_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/stroke_round_rectangle_white_r10"
+                    android:elevation="6dp"
+                    android:gravity="center"
+                    android:text="@string/group_page_create_group"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:backgroundTint="@null"
+                    app:cornerRadius="20dp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/group_main_loading"
+                style="@android:style/Widget.ProgressBar.Large"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/view24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/group_main_fragment_view_rv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="0dp"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</FrameLayout>
